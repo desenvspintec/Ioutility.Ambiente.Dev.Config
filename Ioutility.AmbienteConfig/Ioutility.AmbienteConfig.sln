@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ioutility.AmbienteConfig", "Ioutility.AmbienteConfig\Ioutility.AmbienteConfig.csproj", "{7F84EB21-2747-4403-9B51-52C9A78CF01E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F84EB21-2747-4403-9B51-52C9A78CF01E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F84EB21-2747-4403-9B51-52C9A78CF01E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F84EB21-2747-4403-9B51-52C9A78CF01E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F84EB21-2747-4403-9B51-52C9A78CF01E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72A5D894-4A30-4DC4-B829-B1D311DA5BE3}
+	EndGlobalSection
+EndGlobal

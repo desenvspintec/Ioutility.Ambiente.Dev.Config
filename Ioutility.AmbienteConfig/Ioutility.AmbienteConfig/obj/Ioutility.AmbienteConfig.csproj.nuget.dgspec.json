@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\projetos\\pulsati-microservices\\ioutility\\Ioutility.Ambiente.Dev.Config\\Ioutility.AmbienteConfig\\Ioutility.AmbienteConfig\\Ioutility.AmbienteConfig.csproj": {}
+  },
+  "projects": {
+    "C:\\projetos\\pulsati-microservices\\ioutility\\Ioutility.Ambiente.Dev.Config\\Ioutility.AmbienteConfig\\Ioutility.AmbienteConfig\\Ioutility.AmbienteConfig.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projetos\\pulsati-microservices\\ioutility\\Ioutility.Ambiente.Dev.Config\\Ioutility.AmbienteConfig\\Ioutility.AmbienteConfig\\Ioutility.AmbienteConfig.csproj",
+        "projectName": "Ioutility.AmbienteConfig",
+        "projectPath": "C:\\projetos\\pulsati-microservices\\ioutility\\Ioutility.Ambiente.Dev.Config\\Ioutility.AmbienteConfig\\Ioutility.AmbienteConfig\\Ioutility.AmbienteConfig.csproj",
+        "packagesPath": "C:\\Users\\Cassiano Nunes\\.nuget\\packages\\",
+        "outputPath": "C:\\projetos\\pulsati-microservices\\ioutility\\Ioutility.Ambiente.Dev.Config\\Ioutility.AmbienteConfig\\Ioutility.AmbienteConfig\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Cassiano Nunes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://github.com/desenvspintec/Ioutility.Bus.Commands": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

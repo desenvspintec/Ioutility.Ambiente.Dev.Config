@@ -1,0 +1,61 @@
+version: '3.4'
+
+services:
+  loutilitycadastrowebclient:
+    image: ioutility-adm-apresentacao-service
+    environment:
+      NODE_ENV: production
+    ports:
+      - '8089:80'
+
+  pulsati.ioutility.apigateway:
+    image: ioutility-apigateway
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5022:80"
+  
+  pulsati.ioutility.storage.api:
+    image: ioutility-storage-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5041:80"
+    depends_on:
+      - ioutility.rabbitmq
+
+  pulsati.ioutility.cadastro.api:
+    image: ioutility-cadastro-service
+    hostname: ioutility-cadastro-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    expose:
+      - 80
+    depends_on:
+      - ioutility.sqlserver
+      - ioutility.rabbitmq
+
+  ioutility.rabbitmq:
+    image: rabbitmq:3-management
+    hostname: ioutilityrabbitmq
+    ports:
+      - '4369:4369'
+      - '5671:5671'
+      - '5672:5672'
+      - '25672:25672'
+      - '15671:15671'
+      - '15672:15672'
+
+  ioutility.sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    hostname: ioutilitycadastrodbserver
+    environment:
+      ACCEPT_EULA: 'Y'
+      MSSQL_SA_PASSWORD: "ZIm&9^S6y#cz"
+      MSSQL_PID: Express
+    ports:
+      - '1433:1433'
+    volumes:
+      -  C:\dados\valumes\mssql:/var/opt/mssql3
+
+# docker-compose  -f "docker-compose.yml"   -p ioutilitycompose --ansi never up -d
