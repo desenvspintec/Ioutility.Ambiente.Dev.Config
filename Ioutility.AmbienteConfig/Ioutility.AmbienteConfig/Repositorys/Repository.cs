@@ -26,6 +26,18 @@ namespace Ioutility.AmbienteConfig.Repositorys
             var repositorys = ConverterJsonRepositoryParaDomain(jsonRepositorys);
             return repositorys;
         }
+
+        public GitHubRepositorio ObterConfiguradorDeAmmbiente()
+        {
+            try
+            {
+                return ObterGitHubRepositorys().First(repo => repo.ConfiguradorDeAmbiente);
+            }
+            catch (Exception erro)
+            {
+                throw new Exception("este projeto nao possui um configurador de ambiente. Para definir qual projeto será o configurador de ambiente, no json de repositorios, sete a informção \"configuradorDeAmbiente\" = true", erro);
+            }
+        }
         private static IEnumerable<GitHubRepositorio> ConverterJsonRepositoryParaDomain(string jsonRepositorys)
         {
             IEnumerable<GitHubRepositorioDTO> dtos;
@@ -38,7 +50,7 @@ namespace Ioutility.AmbienteConfig.Repositorys
                 throw new Exception("não foi possivel converter o conteudo do arquivo JSON em lista de GitHubRepositoryDTO. Conteudo do arquivo: " + jsonRepositorys, erro);
             }
 
-            return dtos.Select(dto => new GitHubRepositorio(dto.NomeRepositorio, dto.PossuiDockerfile, dto.EnderecoDockerfile)).ToList(); 
+            return dtos.Select(dto => new GitHubRepositorio(dto.NomeRepositorio, dto.PossuiDockerfile, dto.EnderecoDockerfile, dto.ConfiguradorDeAmbiente)).ToList(); 
         }
         private static string ObterConteudoJsonRepository()
         {

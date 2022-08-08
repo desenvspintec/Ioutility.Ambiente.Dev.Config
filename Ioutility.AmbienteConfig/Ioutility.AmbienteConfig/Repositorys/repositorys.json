@@ -1,9 +1,39 @@
 [
-  { "nomeRepositorio": "Ioutility.Bus.Commands", "possuiDockerfile": false },
-  { "nomeRepositorio": "Ioutility.Franquia.Service", "possuiDockerfile": false },
-  { "nomeRepositorio": "Ioutility.Testes.BDD", "possuiDockerfile": false },
-  { "nomeRepositorio": "Ioutility.Adm.Apresentacao.Service", "possuiDockerfile": true, "enderecoDockerfile": ""},
-  { "nomeRepositorio": "Ioutility.Storage.Service", "possuiDockerfile": true, "enderecoDockerfile": ""},
-  { "nomeRepositorio": "Iotuility.Cadastro.Service", "possuiDockerfile": true, "enderecoDockerfile": ""},
-  { "nomeRepositorio": "Ioutility.ApiGateway.Service", "possuiDockerfile": true, "enderecoDockerfile": "Ioutility.ApiGateway.Api"}
+  {
+    "nomeRepositorio": "Ioutility.Ambiente.Dev.Config",
+    "possuiDockerfile": false,
+    "configuradorDeAmbiente":  true
+  },
+  {
+    "nomeRepositorio": "Ioutility.Bus.Commands",
+    "possuiDockerfile": false
+  },
+  {
+    "nomeRepositorio": "Ioutility.Franquia.Service",
+    "possuiDockerfile": false
+  },
+  {
+    "nomeRepositorio": "Ioutility.Testes.BDD",
+    "possuiDockerfile": false
+  },
+  {
+    "nomeRepositorio": "Ioutility.Adm.Apresentacao.Service",
+    "possuiDockerfile": true,
+    "enderecoDockerfile": ""
+  },
+  {
+    "nomeRepositorio": "Ioutility.Storage.Service",
+    "possuiDockerfile": true,
+    "enderecoDockerfile": ""
+  },
+  {
+    "nomeRepositorio": "Iotuility.Cadastro.Service",
+    "possuiDockerfile": true,
+    "enderecoDockerfile": ""
+  },
+  {
+    "nomeRepositorio": "Ioutility.ApiGateway.Service",
+    "possuiDockerfile": true,
+    "enderecoDockerfile": "Ioutility.ApiGateway.Api"
+  }
 ]

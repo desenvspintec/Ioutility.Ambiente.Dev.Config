@@ -9,17 +9,20 @@ EOperacao operacao;
 do
 {
     operacao = ObterOperacao();
-    var commandHandler = new AmbienteService();
+    var ambienteService = new AmbienteService();
     switch (operacao)
     {
         case EOperacao.ClonarRepositorios_1:
-            commandHandler.ClonarRepositorios();
+            ambienteService.ClonarRepositorios();
             break;
         case EOperacao.PullRepositorios_2:
-            commandHandler.PullRepositorios();
+            ambienteService.PullRepositorios();
             break;
         case EOperacao.RealizarBuildTodasImagens_3:
-            commandHandler.BuildarImagensDocker();
+            ambienteService.BuildarImagensDocker();
+            break;
+        case EOperacao.ExecutarDockerCompose_4:
+            ambienteService.ExecutarDockerCompose();
             break;
         case EOperacao.Encerrar_10:
             break;
@@ -28,7 +31,7 @@ do
     }
     if (operacao != EOperacao.Encerrar_10)
         Console.WriteLine("Operação realizada com sucesso");
-    commandHandler.Dispose();
+    ambienteService.Dispose();
     Console.WriteLine("");
 
 } while (operacao != EOperacao.Encerrar_10);

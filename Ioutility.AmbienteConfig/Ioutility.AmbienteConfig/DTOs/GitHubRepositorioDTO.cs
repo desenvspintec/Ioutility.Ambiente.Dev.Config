@@ -10,6 +10,7 @@
         public string NomeRepositorio { get; set; }
         public bool PossuiDockerfile { get; set; }
         public string? EnderecoDockerfile { get; set; }
+        public bool? ConfiguradorDeAmbiente { get; set; }
 
     }
 }

@@ -31,6 +31,15 @@ namespace Ioutility.AmbienteConfig.Services
             }
         }
 
+        internal void ExecutarDockerCompose()
+        {
+            var repositorioConfigurador = _repository.ObterConfiguradorDeAmmbiente();
+            
+            _cmdService.ExecutarComando("cd " + repositorioConfigurador.NomeRepositorio);
+
+            _cmdService.ExecutarComando("docker-compose  -f \"ioutility-compose.yml\"   -p ioutilitycompose --ansi never up -d");
+        }
+
         public void BuildarImagensDocker()
         {
             var repositorios = _repository.BuscarComDocckerfile();

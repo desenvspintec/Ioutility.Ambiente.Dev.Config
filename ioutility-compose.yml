@@ -1,22 +1,21 @@
 version: '3.4'
 
 services:
-  loutilitycadastrowebclient:
-    image: ioutility-adm-apresentacao-service
-    environment:
-      NODE_ENV: production
+  ioutility.adm.apresentacao.service:
+    image: ioutility.adm.apresentacao.service
     ports:
       - '8089:80'
 
-  pulsati.ioutility.apigateway:
-    image: ioutility-apigateway
+  ioutility.apigateway.service:
+    image: ioutility.apigateway.service
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "5022:80"
   
-  pulsati.ioutility.storage.api:
-    image: ioutility-storage-service
+  ioutility.storage.service:
+    image: ioutility.storage.service
+    restart: on-failure
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
@@ -24,9 +23,9 @@ services:
     depends_on:
       - ioutility.rabbitmq
 
-  pulsati.ioutility.cadastro.api:
-    image: ioutility-cadastro-service
-    hostname: ioutility-cadastro-service
+  ioutility.cadastro.service:
+    image: iotuility.cadastro.service
+    hostname: iotuility.cadastro.service
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     expose:
@@ -34,6 +33,7 @@ services:
     depends_on:
       - ioutility.sqlserver
       - ioutility.rabbitmq
+    restart: on-failure
 
   ioutility.rabbitmq:
     image: rabbitmq:3-management
@@ -51,11 +51,11 @@ services:
     hostname: ioutilitycadastrodbserver
     environment:
       ACCEPT_EULA: 'Y'
-      MSSQL_SA_PASSWORD: "ZIm&9^S6y#cz"
+      MSSQL_SA_PASSWORD: "yourStrong(!)Password"
       MSSQL_PID: Express
     ports:
       - '1433:1433'
     volumes:
       -  C:\dados\valumes\mssql:/var/opt/mssql3
 
-# docker-compose  -f "docker-compose.yml"   -p ioutilitycompose --ansi never up -d
+# docker-compose  -f "ioutility-compose.yml"   -p ioutilitycompose --ansi never up -d
