@@ -27,7 +27,7 @@
     "enderecoDockerfile": ""
   },
   {
-    "nomeRepositorio": "Iotuility.Cadastro.Service",
+    "nomeRepositorio": "ioutility.Cadastro.Service",
     "possuiDockerfile": true,
     "enderecoDockerfile": ""
   },
