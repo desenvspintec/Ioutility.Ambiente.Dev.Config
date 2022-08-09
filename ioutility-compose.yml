@@ -24,8 +24,8 @@ services:
       - ioutility.rabbitmq
 
   # ioutility.cadastro.service:
-  #   image: iotuility.cadastro.service
-  #   hostname: iotuility.cadastro.service
+  #   image: ioutility.cadastro.service
+  #   hostname: ioutility.cadastro.service
   #   environment:
   #     - ASPNETCORE_ENVIRONMENT=Development
   #   expose:
