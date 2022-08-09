@@ -1,10 +1,10 @@
 version: '3.4'
 
 services:
-  ioutility.adm.apresentacao.service:
-    image: ioutility.adm.apresentacao.service
-    ports:
-      - '8089:80'
+  # ioutility.adm.apresentacao.service:
+  #   image: ioutility.adm.apresentacao.service
+  #   ports:
+  #     - '8089:80'
 
   ioutility.apigateway.service:
     image: ioutility.apigateway.service
@@ -23,17 +23,17 @@ services:
     depends_on:
       - ioutility.rabbitmq
 
-  ioutility.cadastro.service:
-    image: iotuility.cadastro.service
-    hostname: iotuility.cadastro.service
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    expose:
-      - 80
-    depends_on:
-      - ioutility.sqlserver
-      - ioutility.rabbitmq
-    restart: on-failure
+  # ioutility.cadastro.service:
+  #   image: iotuility.cadastro.service
+  #   hostname: iotuility.cadastro.service
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Development
+  #   expose:
+  #     - 80
+  #   depends_on:
+  #     - ioutility.sqlserver
+  #     - ioutility.rabbitmq
+  #   restart: on-failure
 
   ioutility.rabbitmq:
     image: rabbitmq:3-management

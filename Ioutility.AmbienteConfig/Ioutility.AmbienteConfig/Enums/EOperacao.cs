@@ -6,6 +6,7 @@
         PullRepositorios_2 = 2,
         RealizarBuildTodasImagens_3 = 3,
         ExecutarDockerCompose_4 = 4,
+        SelecionarProjeto_9 = 9,
         Encerrar_10 = 10,
 
     }
