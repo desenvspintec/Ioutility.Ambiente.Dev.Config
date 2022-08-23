@@ -8,6 +8,7 @@ services:
 
   ioutility.apigateway.service:
     image: ioutility.apigateway.service
+    hostname: ioutility-apigateway-service
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
@@ -15,9 +16,11 @@ services:
   
   ioutility.storage.service:
     image: ioutility.storage.service
+    hostname: ioutility-storage-service
     restart: on-failure
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - EstaEmDevDocker=true
     ports:
       - "5041:80"
     depends_on:
@@ -28,6 +31,7 @@ services:
   #   hostname: ioutility.cadastro.service
   #   environment:
   #     - ASPNETCORE_ENVIRONMENT=Development
+  #     - EstaEmDevDocker=true
   #   expose:
   #     - 80
   #   depends_on:
@@ -37,7 +41,7 @@ services:
 
   ioutility.rabbitmq:
     image: rabbitmq:3-management
-    hostname: ioutilityrabbitmq
+    hostname: ioutility-rabbitmq
     ports:
       - '4369:4369'
       - '5671:5671'
