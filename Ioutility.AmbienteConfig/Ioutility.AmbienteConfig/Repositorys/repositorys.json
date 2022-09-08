@@ -32,6 +32,11 @@
     "enderecoDockerfile": ""
   },
   {
+    "nomeRepositorio": "Ioutility.GeradorRelatorio.Service",
+    "possuiDockerfile": true,
+    "enderecoDockerfile": ""
+  },
+  {
     "nomeRepositorio": "Ioutility.ApiGateway.Service",
     "possuiDockerfile": true,
     "enderecoDockerfile": "Ioutility.ApiGateway.Api"
