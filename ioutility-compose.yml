@@ -38,18 +38,18 @@ services:
     depends_on:
       - ioutility.rabbitmq
 
-  # ioutility.cadastro.service:
-  #   image: ioutility.cadastro.service
-  #   hostname: ioutility.cadastro.service
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - EstaEmDevDocker=true
-  #   expose:
-  #     - 80
-  #   depends_on:
-  #     - ioutility.sqlserver
-  #     - ioutility.rabbitmq
-  #   restart: on-failure
+  ioutility.cadastro.service:
+    image: ioutility.cadastro.service
+    hostname: ioutility.cadastro.service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - EstaEmDevDocker=true
+    ports:
+      - "5233:80"
+    depends_on:
+      - ioutility.sqlserver
+      - ioutility.rabbitmq
+    restart: on-failure
 
   ioutility.rabbitmq:
     image: rabbitmq:3-management
